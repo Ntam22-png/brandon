@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Education | Ntam Brandon Kum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077ff;
+    }
+
+    /* Main layout */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 60px;
+    }
+
+    .section-title {
+      grid-column: span 2;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #0d1117;
+    }
+
+    /* Projects */
+    .project {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .project h3 {
+      font-size: 1.1rem;
+      color: #0077ff;
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1px solid #0077ff;
+      color: #0077ff;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0077ff;
+      color: #fff;
+    }
+
+    /* Education Section */
+    .education, .certifications {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .education h3, .certifications h3 {
+      color: #0d1117;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .education p, .certifications p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="section-title">
+      <h1>Projects & Education</h1>
+    </div>
+
+    <!-- Left: Projects -->
+    <div>
+      <div class="project">
+        <h3>Network Monitoring Tool</h3>
+        <p>Developed a simple SNMP-based tool for tracking real-time network device performance using Python and GNS3.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="project">
+        <h3>Campus Wi-Fi Optimization</h3>
+        <p>Designed an efficient topology for campus-wide internet access and implemented VLAN configurations for better traffic management.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="project">
+        <h3>Packet Tracer Lab Series</h3>
+        <p>Simulated multiple network scenarios including Syslog and SNMP configurations, routing, and switching for study purposes.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <!-- Right: Education -->
+    <div>
+      <div class="education">
+        <h3>Bachelor of Engineering in Computer Engineering</h3>
+        <p>University of Buea</p>
+        <p><strong>Focus:</strong> Network Systems, Infrastructure Design, Security</p>
+      </div>
+
+      <div class="certifications">
+        <h3>Certifications</h3>
+        <p>Google Analytics Certification – Skillshop</p>
+        <p>Cisco CCNA (in progress)</p>
+        <p>Introduction to Cybersecurity – Cisco Networking Academy</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
