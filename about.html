@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ntam Brandon Kum</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header .logo {
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077ff;
+    }
+
+    /* About Section */
+    .about {
+      padding: 70px 10%;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .about img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .about h1::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #0077ff;
+      margin: 8px auto 0;
+      border-radius: 3px;
+    }
+
+    .about-content h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    /* Footer link back */
+    .footer-nav {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-nav a {
+      color: #0077ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .about img {
+        margin: 0 auto;
+      }
+
+      .about-content {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-image">
+      <img src="PX.jpg" alt="Networking Lab">
+    </div>
+
+    <div class="about-content">
+      <h1>About Me</h1>
+      <h2>Passionate About AI AUtomation </h2>
+      <p>
+        I'm an AI Automation specialist passionate about integrating artificial intelligence 
+    into business workflows. I create smart systems using platforms like Zapier, 
+    Make (Integromat), OpenAI, and Python to automate repetitive tasks, 
+    connect apps, and enhance productivity.
+      </p>
+      <blockquote>
+    “Automation is not about replacing people — it’s about freeing them to do more 
+    meaningful work.”
+  </blockquote>
+      <div class="footer-nav">
+        <a href="index.html">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

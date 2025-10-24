@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills & Expertise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f9fafb;
+      color: #222;
+      padding: 40px 60px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077ff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .skills-section {
+      flex: 1;
+      min-width: 300px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .skills-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #0077ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .skill-item {
+      margin: 12px 0;
+    }
+
+    .skill-item span {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .progress {
+      background: #e5e7eb;
+      border-radius: 5px;
+      height: 8px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #0077ff;
+      border-radius: 5px;
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tool {
+      background: #0077ff;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Skills & Expertise</h1>
+
+  <div class="skills-container">
+    <!-- Left section: Technical/Admin/Communication Skills -->
+    <div class="skills-section">
+      <h2>Professional Skills</h2>
+      <div class="skill-item">
+        <span><strong>AI Automation Tools: Zapier, Make (Integromat)/strong><small>65%</small></span>
+        <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span><strong>AI Models: ChatGPT, GPT-4 API</strong><small>40%</small></span>
+        <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span><strong>Web Technologies: HTML, CSS</strong><small>50%</small></span>
+        <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span><strong>Database Integration: Google Sheets, Airtable, Notion</strong><small>40%</small></span>
+        <div class="progress"><div class="progress-bar" style="width:83%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span><strong>Communication Tools: Slack, Gmail, Twilio</strong><small>70%</small></span>
+        <div class="progress"><div class="progress-bar" style="width:82%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span><strong>Programming:Python</strong><small>30%</small></span>
+        <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+      </div>
+    </div>
+
+    <!-- Right section: Software & Tools -->
+    <div class="skills-section">
+      <h2>Software & Tools</h2>
+      <div class="tools">
+        <div class="tool">Make.com</div>
+        <div class="tool">Zapier</div>
+        <div class="tool">Slack</div>
+        <div class="tool">Asana</div>
+        <div class="tool">Trello</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

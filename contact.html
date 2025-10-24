@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+
+  <!-- ✅ Load EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    // ✅ Initialize EmailJS correctly
+    (function() {
+      emailjs.init('mBO2FuoJlvDU4g57A'); // Replace with your actual PUBLIC KEY (no _PUBLIC_KEY suffix)
+    })();
+
+    function sendMail(event) {
+      event.preventDefault();
+
+      const params = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        company: document.getElementById('company').value,
+        service_interest: document.getElementById('service').value,
+        message: document.getElementById('message').value
+      };
+
+      // ✅ Use correct Service ID, Template ID, and Public Key
+      emailjs.send('service_5x8qb0d', 'template_oib681k', params)
+      .then(function(response) {
+        alert('✅ Message sent successfully!');
+        document.getElementById('contact-form').reset();
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert('❌ Failed to send message. Please check your setup or try again.');
+      });
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fb;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+    }
+    button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .quick-response, .resume-btn {
+      background: #f1f5ff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .resume-btn button {
+      background: #28a745;
+    }
+    .resume-btn button:hover {
+      background: #1f7a33;
+    }
+    @media(max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; margin-bottom:30px;">Let's Work Together</h1>
+
+  <div class="container">
+    <form id="contact-form" onsubmit="sendMail(event)">
+      <div class="form-row">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+      </div>
+      <div class="form-row">
+        <input type="text" id="company" placeholder="Company" />
+        <select id="service">
+          <option value="">Select a Service</option>
+          <option>Business Workflow Automation</option>
+          <option>Chatbot Development</option>
+          <option>AI-Powered Email & Data Management</option>
+          <option>Custom Automation Consulting</option>
+        </select>
+      </div>
+      <textarea id="message" rows="6" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="info">
+      <div class="info-item">📧 <span>kumntam22@gmail.com</span></div>
+      <div class="info-item">📞 <span>(237) 679 854 361</span></div>
+      <div class="info-item">📍 <span>Buea</span></div>
+      <div class="info-item">🕒 <span>Availability: Sunday - Sunday</span></div>
+      <div class="quick-response">Quick Response: Replies within 24 hours</div>
+      <div class="resume-btn">
+        <button onclick="window.location.href='resume.pdf'">Download Resume</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

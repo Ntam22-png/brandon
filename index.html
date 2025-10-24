@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kum Ntam Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fb;
+      overflow-x: hidden;
+    }
+
+    /* ===== Sticky Navbar ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0b0d17;
+      color: white;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      padding: 18px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #007BFF;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+
+    section {
+      scroll-margin-top: 70px;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0b0d17;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: left;
+    }
+
+    .footer-about h3 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .footer-about p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-links h4 {
+      margin-bottom: 15px;
+      color: #007BFF;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      margin: 10px 0;
+    }
+
+    .footer-links ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: #007BFF;
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 15px;
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+      }
+      nav a {
+        font-size: 14px;
+      }
+      .footer-container {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+5
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== Linked Pages ===== -->
+  <section id="home"><iframe src="home.html"></iframe></section>
+  <section id="about"><iframe src="about.html"></iframe></section>
+  <section id="services"><iframe src="services.html"></iframe></section>
+  <section id="experience"><iframe src="experience.html"></iframe></section>
+  <section id="skills"><iframe src="skills.html"></iframe></section>
+  <section id="contact"><iframe src="contact.html"></iframe></section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Kum Ntam</h3>
+        <p>AI Automation Developer & Workflow Engineer</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">My Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Kum Ntam. All Rights Reserved. | Designed with ❤️ using HTML, CSS & JS</p>
+    </div>
+  </footer>
+
+  <!-- ===== Script for Active Navbar Highlight ===== -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
